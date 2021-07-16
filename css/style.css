@@ -1,0 +1,431 @@
+@charset "UTF-8";
+* {
+  /* * указывает что это идет обращение ко всему html доку*/
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  /*меняет подсчет ширины блока чтобы было проще верстать*/
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+/*убираются линии обводки у некоторрых браузеров*/
+a:focus, a:active {
+  outline: none; }
+
+nav, footer, header, aside {
+  display: block; }
+
+/*Это делает популярные теги блочными*/
+html, body {
+  /*уравнивает поведение шрифтов и элекмонтов для разных браузеров. Прим - запрещ 
+    увеличен шрифта на айфонах*/
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {
+  font-family: inherit; }
+
+/*чтобы теги наследовали семейства шрифта,
+ они по умолчанию этого не делают */
+/*параметры разным тегам которые убирают особенноэтих тегов в разных браузерах,
+отступы лишние декторативные элементы, отступы*/
+input::-ms-clear {
+  display: none; }
+
+/*Убирает в поле ввода крестик в IE*/
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+/*Убирает лишние отступы и пробелы в частности и в кнопках браузера firefox*/
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400; }
+
+/*Обнуляем заголовки*/
+/*-------------------------*/
+@font-face {
+  font-family: 'Gilroy-Medium';
+  src:url('../fonts/Gilroy-Medium.eot') format('eot'),
+      url('../fonts/Gilroy-Medium.woff') format('woff'), 
+      url('../fonts/Gilroy-Medium.ttf')  format('truetype');
+  }
+
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src:url('../fonts/Gilroy-Bold.eot') format('eot'),
+      url('../fonts/Gilroy-Bold.woff') format('woff'), 
+      url('../fonts/Gilroy-Bold.ttf')  format('truetype');
+  }  
+
+
+body {
+  
+ }
+
+
+ .container {
+  padding: 0 auto;
+  margin: 0 auto;
+  width: 944px;
+  max-width: 944px;
+}
+
+.header {
+  background: white;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  height: 88px;
+}
+
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0 36px 0;
+  justify-content: space-between;
+
+
+
+}
+
+.menu_btn {
+  font-family: 'Gilroy-Bold', serif;
+  font-size: 18px;
+  line-height: 22px;
+  color: #828282;
+  display: flex;
+  flex-direction: row;
+  
+  
+}
+
+.menu_btn:hover{
+  color: #070707;
+  cursor: pointer;
+}
+
+.line {
+  width: 940px;
+  height: 0px;
+  border: 1px solid #828282;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.after_line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 89px 0 0 0;
+}
+
+.name_denis {
+}
+
+.name_denis_novik {
+  width: 123.51px;
+  font-family: 'Gilroy-Bold', serif;
+  font-size: 47.34px;  
+  line-height: 58.61px;
+  color: #070707;
+  margin: 31px 0 0 0;
+}
+.after_line_ux-ui {
+  font-family: 'Gilroy-Medium', serif;
+  font-size: 18px;
+  line-height: 21.83px;
+  color: #070707;
+  position: relative;
+  margin: 76px 51px 0 0;
+
+}
+.after_line_luang {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  writing-mode:	vertical-rl; /*Делают текст горизотальным или вертикальным, в зависимости от настроки*/
+  transform:rotate(180deg); /*поворачивает блок*/
+  font-family: 'Gilroy-Bold', serif;
+  font-size: 16px;
+  line-height: 19.81px;
+  color: #070707;
+  margin: 56px 0 0 0;
+}
+
+.after_line_luang_choise {
+  color: #828282;
+  margin: 0 0 4px 0;
+}
+
+.after_line_luang_choise:hover {
+  color: #070707;
+  cursor: pointer;
+}
+
+.after_line_luang_active {
+  color: #070707;
+  margin: 4px 0 0 0;
+}
+
+.after_line_img {
+  width: 943.61px;
+  height: 387px;
+  margin: 39px 0 0 0 ;
+}
+
+.grey_fon {
+  background: #F6F6F6;
+  width: 100%;
+  height: 506px;
+  max-width: 100%;
+  margin: 104px 0 0 0;
+}
+
+.about_h2 {
+  font-family: 'Gilroy-Bold', serif;
+  font-size: 34px;
+  line-height: 42px;
+  text-align: center;
+  color: #070707;
+  padding: 115px 0 3px 0;
+
+}
+
+.about_text {
+  font-family: 'Gilroy-Medium', serif;
+  font-size: 18px;
+  line-height: 21.83px;
+  text-align: center;
+  color: #070707;
+}
+
+.about_txt p{
+  margin: 20px 0 45px 0;
+}
+
+.about_txt p:last-child{
+  margin-bottom: 0px;
+}
+
+.skills {
+  
+}
+.skills_h2 {
+  font-family: 'Gilroy-Bold', serif;
+  font-size: 34px;
+  line-height: 42px;
+  text-align: center;
+  color: #070707;
+  padding: 86px 0 0 0;
+
+
+}
+.skills_text {
+  font-family: 'Gilroy-Medium', serif;
+  font-size: 18px;
+  line-height: 21.83px;
+  text-align: center;
+  color: #070707;
+  margin: 56px 0 89px 0;
+
+}
+
+
+.skills_cards {
+  display: flex;
+  flex-wrap: wrap;
+  
+
+}
+.skills_card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80.46px;
+  height: 206.27px;
+  justify-content: space-around;
+}
+
+.skills_cards .skills_card:first-child{
+  margin: 0 177px 0 48px;
+}
+
+.skills_cards .skills_card:nth-child(2){
+  margin: 0  175px 0 0;
+}
+
+.skills_cards .skills_card:nth-child(3){
+  margin: 0 179px 0 0;
+}
+
+.skills_cards .skills_card:last-child {
+  margin: -3px 0 0 0;
+  height: 214px;
+}
+
+.skills_card_logo {
+  margin: 0 0 20px 0;
+}
+.skills_card_name {
+  font-family: 'Gilroy-Bold', serif;
+  font-size: 14px;
+  line-height: 17.33px;
+  text-align: center;
+  color: #828282;
+  padding: 0 0 36px 0 ;
+}
+.skills_cards_stars {
+  padding: 0px 0 0 0;
+}
+
+
+.grey_fon_long {
+  background: #F6F6F6;
+  max-width: 100%;
+  width: 100%;
+  height: 2253px;
+  margin: 106px 0 0 0;
+
+}
+
+
+.portfolio {
+  font-family: 'Gilroy-Bold', serif;
+  font-size: 34px;
+  line-height: 42px;
+  text-align: center;
+  color: #070707;
+  padding: 107px 0 54px 5px;
+
+}
+
+
+.portfolio_img {
+  position: relative;
+  left: 3px;
+  /*width: 936px;
+  height: 530px;*/
+  padding: 0 0 20px 0;
+}
+
+.link_portfolio {
+  font-family: 'Gilroy-Medium', serif;
+  font-size: 18px;
+  line-height: 21.83px;
+  text-align: center;
+  color: #070707;
+  text-decoration-line: underline;
+  margin: 22px 0 102px 0;
+  position: relative;
+  left: 6px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link_portfolio:hover{
+  cursor: pointer;
+  text-decoration-line: underline;
+
+}
+
+
+.footer {
+  height: 512px;
+  max-width: 100%;
+  margin: 30px 0 0 0 ;
+}
+
+.footer_contact {
+  font-family: 'Gilroy-Bold', serif;
+  font-size: 34px;
+  line-height: 42px;
+  text-align: center;
+  color: #070707;
+  margin: 109px 0 24px 0;
+}
+.footer_text {
+  font-family: 'Gilroy-Medium', serif;
+  font-size: 18px;
+  line-height: 21.83px;
+  text-align: center;
+  color: #070707;
+  position: relative;
+  left: 5px;
+  margin: 0 0 34px 0;
+
+}
+.footer_button {
+  width:  180.5;
+  height: 42px;
+  background: #070707;
+  font-family: 'Gilroy-Bold', serif;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+  padding: 6px 30px 6px 28px;
+  border-radius: 20px 20px 20px 20px;
+  align-items: center;
+  display: block;
+  margin: 0 auto;
+  
+}
+
+.footer_button:active {
+  background: #828282;
+}
+.footer_media {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 0 0px;
+}
+
+
+.footer_media_links {
+  margin: 85px 30px 44px 30px;
+
+}
+.footer_text_end {
+  font-family: 'Gilroy-Medium', serif;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #828282;
+  padding: 0 0 0 5px;
+
+}
